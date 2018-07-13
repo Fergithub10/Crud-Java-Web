@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import negocios.Empleado;
+import modelo.Empleado;
 
 /**
  * Servlet implementation class muestraRegistros
@@ -64,6 +64,7 @@ public class ProcesaDatos extends HttpServlet {
 			// se crea el objeto 
 			Empleado empleado = new Empleado(nombre,apellido, edad, salario);
 			
+			// se guarda el objeto con una referencia
 			request.setAttribute("empleado",empleado);
 			
 			request.getRequestDispatcher("/renderDatos.jsp").forward(request, response);

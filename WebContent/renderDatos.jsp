@@ -8,7 +8,7 @@
 	<body>
 
 
-	<%@ page import="negocios.Empleado" %>
+	<%@ page import="modelo.Empleado" %>
 	<%
 		Empleado empleado = (Empleado)request.getAttribute("empleado");
 	%>

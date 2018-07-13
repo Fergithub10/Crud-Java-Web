@@ -7,7 +7,7 @@
 </head>
 
 	<body>
-		<%@ page import="negocios.Calcula" %>
+		<%@ page import="modelo.Calcula" %>
 		<%
 		// Extracción de los parámetros recibidos
 			String nombre = request.getParameter("nombre");

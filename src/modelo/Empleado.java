@@ -1,4 +1,4 @@
-package negocios;
+package modelo;
 
 public class Empleado {
 
