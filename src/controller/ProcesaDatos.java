@@ -62,10 +62,10 @@ public class ProcesaDatos extends HttpServlet {
 			Integer edad = Integer.parseInt(request.getParameter("edad"));
 			
 			// se crea el objeto 
-			Empleado empleado = new Empleado(nombre,apellido, edad, salario);
+			//Empleado empleado = new Empleado(nombre,apellido, edad, salario);
 			
 			// se guarda el objeto con una referencia
-			request.setAttribute("empleado",empleado);
+			//request.setAttribute("empleado",empleado);
 			
 			request.getRequestDispatcher("/renderDatos.jsp").forward(request, response);
 		

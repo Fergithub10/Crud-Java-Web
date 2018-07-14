@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.btn-default {
+	background-color: #f0ece2;
+	border-color: #f0ece2;
+	}
+
+.btn-default .btn-label-default {
+	position: relative;
+	left: -12px;
+	display: inline-block;
+	padding: 6px;
+	background: #ddae49;
+	color: #fff;
+	border-radius: 3px 0 0 3px;
+	width: 20%;
+	}
+
+.btn-labeled {
+	padding-top: 0;
+	padding-bottom: 0;
+	}
+
+.btn {
+	margin-bottom:10px;
+	min-width: 150px;
+	text-align: left;
+	}
+
+.container { 
+	font-family: 'Open Sans', sans-serif;
+	 }
+	 
+.fondo,.fondo-b{
+	background-color: rgb(153, 204, 255);
+	width: 400px;
+	display: inline-block;
+}
+
+.fondo-b{
+	background-color: rgb(255, 204, 102);		
+}

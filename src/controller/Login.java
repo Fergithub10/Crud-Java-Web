@@ -43,21 +43,19 @@ public class Login extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.setContentType("text/html;charset=UTF-8");
-		//PrintWriter out = response.getWriter();
 		
-			// se acomodan los datos del formulario
+		// se acomodan los datos del formulario
 			String user = request.getParameter("user");
 			String password =request.getParameter("password");
 						
 			try {
 				
 				if(this.daoMysql.login(user, password)) {
-//					request.getRequestDispatcher("/menuPrincipal.jsp").forward(request, response);
+				
 					response.sendRedirect("http://localhost:8080/ApplicacionWeb/menuPrincipal.jsp");
+
 				}else {
 					
-//					request.getRequestDispatcher("/registroNoEncontrado.jsp").forward(request, response);					
 					response.sendRedirect("http://localhost:8080/ApplicacionWeb/registroNoEncontrado.jsp");
 
 				}

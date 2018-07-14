@@ -59,7 +59,33 @@ public class DaoMysql implements Dao{
 	@Override
 	public boolean create(Empleado empleado) {
 		// TODO Auto-generated method stub
-		return false;
+		this.open();
+		
+		try {
+			statement = con.prepareStatement("INSERT INTO Empleados (nombre,apellido,salario,dni,telefono,edad)\n VALUES (?, ?, ?, ?, ?, ?); ");
+
+			statement.setString(1, empleado.getNombre());
+			
+			statement.setString(2, empleado.getApellido());
+			
+			statement.setString(3, String.valueOf(empleado.getSalario()));
+			
+			statement.setString(4, String.valueOf(empleado.getDNI()));
+			
+			statement.setString(5, String.valueOf(empleado.getTelefono()));
+			
+			statement.setString(6 ,String.valueOf(empleado.getEdad()));
+			
+			int resultSet = statement.executeUpdate();
+			
+			return true;
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+			return false;
+		}
 	}
 
 	@Override
@@ -81,7 +107,7 @@ public class DaoMysql implements Dao{
 	}
 	
 	public boolean login(String user, String pass) throws SQLException {
-		this.open();
+		 this.open();
 			
 		 statement = con.prepareStatement("SELECT * FROM Login WHERE user = ? and password = ? ");
 		

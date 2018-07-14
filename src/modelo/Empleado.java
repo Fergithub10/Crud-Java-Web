@@ -2,25 +2,20 @@ package modelo;
 
 public class Empleado {
 
-	Integer ID,edad;
+	Integer ID,edad,dni,telefono;
 	String nombre,apellido;
 	Double salario;
 	
-	public Empleado(Integer iD, Integer edad, String nombre, String apellido, Double salario) {
+	
+	
+	public Empleado(Integer edad, String nombre, String apellido, Double salario, Integer telefono, Integer dni) {
 		super();
-		ID = iD;
 		this.edad = edad;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.salario = salario;
-	}
-
-	public Empleado(String nombre, String apellido, Integer edad, Double salario) {
-
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.edad = edad;
-		this.salario = salario;
+		this.telefono = telefono;
+		this.dni = dni;
 	}
 	
 	public Integer getID() {
@@ -61,6 +56,16 @@ public class Empleado {
 
 	public void setSalario(Double salario) {
 		this.salario = salario;
+	}
+
+	public Integer getDNI() {
+		// TODO Auto-generated method stub
+		return dni;
+	}
+
+	public Integer getTelefono() {
+		// TODO Auto-generated method stub
+		return telefono;
 	}
 	
 	
