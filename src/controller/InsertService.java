@@ -19,6 +19,8 @@ import modelo.Empleado;
 @WebServlet(urlPatterns= {"/insertService"} , name = "InsertService")
 public class InsertService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	// Dao
 	private Dao daoMysql =  new DaoMysql();
        
     /**
@@ -54,7 +56,7 @@ public class InsertService extends HttpServlet {
         Empleado empleado = new Empleado(edad, nombre, apellido, salario, telefono, dni);
         
         if(this.daoMysql.create(empleado)) {
-        	response.sendRedirect("http://localhost:8080/ApplicacionWeb/addedRecord.jsp");
+        	response.sendRedirect("http://localhost:8080/ApplicacionWeb/addRecord.jsp");
         	
         }else {  
         	

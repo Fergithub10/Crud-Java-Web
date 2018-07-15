@@ -12,3 +12,10 @@
 body {
    background-image:url("resources/pictures/crud-background.png");
 }
+
+footer {
+	    background-color: #777;
+	    padding: 10px;
+	    text-align: center;
+	    color: white;
+	}

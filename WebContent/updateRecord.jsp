@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>registro ingresado</title>
+<title>Insert title here</title>
 </head>
 <body>
-
 	<%@include file="headerMenu.jsp" %>
-
+	
 </body>
 </html>

@@ -18,14 +18,14 @@ import modelo.Empleado;
  * Servlet implementation class Login
  */
 @WebServlet(urlPatterns= {"/Login"} , name = "Login")
-public class Login extends HttpServlet {
+public class LoginService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private Dao daoMysql =  new DaoMysql();
 	
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Login() {
+    public LoginService() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -52,7 +52,7 @@ public class Login extends HttpServlet {
 				
 				if(this.daoMysql.login(user, password)) {
 				
-					response.sendRedirect("http://localhost:8080/ApplicacionWeb/menuPrincipal.jsp");
+					response.sendRedirect("http://localhost:8080/ApplicacionWeb/headerMenu.jsp");
 
 				}else {
 					

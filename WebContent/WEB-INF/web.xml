@@ -4,15 +4,8 @@
   <welcome-file-list>
     <welcome-file>Login.jsp</welcome-file>
   </welcome-file-list>
-  
-  <servlet-mapping>
-    <servlet-name>ProcesaDatos</servlet-name>
-    <url-pattern>/ProcesaDatos</url-pattern>
-  </servlet-mapping>
-
   <servlet-mapping>
     <servlet-name>InsertService</servlet-name>
     <url-pattern>/InsertService</url-pattern>
-  </servlet-mapping>
-  
+  </servlet-mapping> 
 </web-app>

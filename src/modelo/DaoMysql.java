@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -18,7 +19,7 @@ public class DaoMysql implements Dao{
 	private String password = "root";
 	private String url = "jdbc:mysql://localhost:3306/"+ bd;
 	private PreparedStatement statement = null;
-	 static final String driver = "com.mysql.jdbc.Driver";
+	 static final String driver = "com.mysql.cj.jdbc.Driver";// "com.mysql.jdbc.Driver";
 	
 	public DaoMysql() {
 		// TODO Auto-generated constructor stub
@@ -103,7 +104,41 @@ public class DaoMysql implements Dao{
 	@Override
 	public List<Empleado> retrieve() {
 		// TODO Auto-generated method stub
-		return null;
+		this.open();
+		List<Empleado> empleados = new ArrayList<Empleado>();
+		
+		try {
+			Statement st = null;
+			st = con.createStatement();
+		
+			ResultSet resulSet = st.executeQuery("SELECT * FROM Empleados"); 
+			
+			if(!resulSet.next()) {
+				return null;
+			}else {
+				
+				while(resulSet.next()) {
+						String nombre = resulSet.getString("nombre");
+						String apellido = resulSet.getString("apellido");
+						Double salario = resulSet.getDouble("salario");
+						Integer telefono =  resulSet.getInt("telefono");
+						Integer dni = resulSet.getInt("dni");
+						Integer edad = resulSet.getInt("edad");
+						
+						empleados.add(new Empleado(edad, nombre, apellido, salario, telefono, dni));
+				}
+					st.close();
+					resulSet.close();
+					
+					return empleados;
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		
+			return null;
 	}
 	
 	public boolean login(String user, String pass) throws SQLException {

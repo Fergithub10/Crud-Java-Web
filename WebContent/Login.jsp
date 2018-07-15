@@ -10,7 +10,7 @@
 	<style type="text/css">
 	  <%@include file="resources/style/login.css" %>
 	</style>
-	<%@ page import="controller.Login" %>
+	<%@ page import="controller.LoginService" %>
 
 	<!--
     you can substitue the span of reauth user for a input with the user and
