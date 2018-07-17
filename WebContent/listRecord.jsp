@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>full Records</title>
 </head>
 <body>
 	<%@include file="headerMenu.jsp" %>

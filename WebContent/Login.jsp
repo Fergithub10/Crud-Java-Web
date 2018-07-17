@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert the System</title>
+<title>welcome</title>
 </head>
 <body>
 	<style type="text/css">
 	  <%@include file="resources/style/login.css" %>
 	</style>
-	<%@ page import="controller.LoginService" %>
+	  <%@ page import="controller.LoginService" %>
 
 	<!--
     you can substitue the span of reauth user for a input with the user and

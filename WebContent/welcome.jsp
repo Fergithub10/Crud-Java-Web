@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>delete Record</title>
+<title>welcome</title>
 </head>
 <body>
-	<%@include file="headerMenu.jsp" %>
-
+	<%@ include file="headerMenu.jsp" %>
 </body>
 </html>

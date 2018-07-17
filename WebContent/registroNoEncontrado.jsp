@@ -4,7 +4,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>(404) The page you were looking for doesn't exist.</title>
+  <title>The user or pass doesn't exist.</title>
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/746852/739588/css/fonts.css" />
   <style type="text/css">
     html,

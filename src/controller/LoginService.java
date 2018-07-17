@@ -52,7 +52,7 @@ public class LoginService extends HttpServlet {
 				
 				if(this.daoMysql.login(user, password)) {
 				
-					response.sendRedirect("http://localhost:8080/ApplicacionWeb/headerMenu.jsp");
+					response.sendRedirect("http://localhost:8080/ApplicacionWeb/welcome.jsp");
 
 				}else {
 					
