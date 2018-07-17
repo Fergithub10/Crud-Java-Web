@@ -24,8 +24,8 @@
 		          <li><a href="/ApplicacionWeb/addRecord.jsp">insert record</a></li>
 		          <li><a href="/ApplicacionWeb/deleteRecord.jsp">delete record</a></li>
 		          <li><a href="/ApplicacionWeb/updateRecord.jsp">update record</a></li>
-		          <li><a href="/ApplicacionWeb/listRecord.jsp">list record</a></li>
-		          <li><a href="/ApplicacionWeb/Login.jsp">log out</a></li>
+		          <li><a href="/ApplicacionWeb/listRecord.jsp">full list</a></li>
+		          <li><a href="/ApplicacionWeb/Login.jsp" class="logout">log out</a></li>
 		        </ul>
 		  </div><!-- /.navbar-collapse -->
 		</nav>

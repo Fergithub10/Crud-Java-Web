@@ -141,6 +141,45 @@ public class DaoMysql implements Dao{
 			return null;
 	}
 	
+	public List<Empleado> filter(String key) {
+		// TODO Auto-generated method stub
+		this.open();
+		List<Empleado> empleados = new ArrayList<Empleado>();
+		
+		try {
+			Statement st = null;
+			st = con.createStatement();
+		
+			ResultSet resulSet = st.executeQuery("SELECT * FROM Empleados WHERE nombre = ? or apellido = ?"); 
+			
+			if(!resulSet.next()) {
+				return null;
+			}else {
+				
+				while(resulSet.next()) {
+						String nombre = resulSet.getString("nombre");
+						String apellido = resulSet.getString("apellido");
+						Double salario = resulSet.getDouble("salario");
+						Integer telefono =  resulSet.getInt("telefono");
+						Integer dni = resulSet.getInt("dni");
+						Integer edad = resulSet.getInt("edad");
+						
+						empleados.add(new Empleado(edad, nombre, apellido, salario, telefono, dni));
+				}
+					st.close();
+					resulSet.close();
+					
+					return empleados;
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		
+			return null;
+	}
+	
 	public boolean login(String user, String pass) throws SQLException {
 		 this.open();
 			
