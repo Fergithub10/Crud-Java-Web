@@ -68,16 +68,10 @@
 								<c:choose>
   									<c:when test="${updatedTable >= 1}">
 											<div class="alert alert-success">
-		  										<strong>Success!</strong> Indicates a successful or positive action.
+		  										<strong>Success!</strong> added record.
 											</div>
 										</div>
   									</c:when>
-									  <c:otherwise>
-											<div class="alert alert-danger">
-		  										<strong>Danger!</strong> Indicates a dangerous or potentially negative action.
-											</div>
-										</div>
-									  </c:otherwise>
 								</c:choose>
 			</div>
 		</div>

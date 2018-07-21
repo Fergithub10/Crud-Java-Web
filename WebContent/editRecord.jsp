@@ -5,42 +5,37 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Update Record</title>
+<title>Edit Record</title>
 </head>
 <body>
-	<%@include file="headerMenu.jsp" %>
 	
-	<div class="container">
-												<!-- formulario busquedad -->
-		<form action="${pageContext.request.contextPath}/editRecord.jsp" method="post">
-			<input type="text" id="search" name="search" placeholder="insert keyword ... " autofocus autocomplete="off">
-			<input type="submit" id="submit" name="submit" value="search">
-		</form>
-												<!-- formulario busquedad -->
-	</div>
-	
-	<sql:setDataSource
+			<%@include file="headerMenu.jsp" %>
+
+			<sql:setDataSource
 		    var="Empleados"
 		    driver="com.mysql.cj.jdbc.Driver"
 		    url="jdbc:mysql://localhost:3306/Empleados"
 		    user="root" password="root"
-		/>
+			/>
 
-		<sql:query var="list_users" dataSource="${Empleados}">
-    		SELECT * FROM Empleados;
-		</sql:query>
-
-			
-		<div class="container">
+			<sql:query var="list_users" dataSource="${Empleados}">
+	    		SELECT * FROM Empleados where nombre = ? or apellido = ? or edad = ? or dni = ?;
+				<sql:param value="${param.search}"/>
+				<sql:param value="${param.search}"/>
+	    		<sql:param value="${param.search}"/>
+	    		<sql:param value="${param.search}"/>
+			</sql:query>
+		 
+			<div class="container">
 			
 			<div class="row">
 				<div class="col-md-10">
 		        	<h4>Edit Record</h4>
 				</div>
-				<div class="col-md-2">	
-			<!-- formulario update -->	
-					<form action="${pageContext.request.contextPath}/perfilRecord.jsp">
-			        	<h4><p data-placement="top" data-toggle="tooltip" title="edit">
+				<div class="col-md-2">		
+			<!-- formulario edit -->
+					<form action="${pageContext.request.contextPath}/perfilRecord.jsp" method="post">
+			        	<h4><p data-placement="top" data-toggle="tooltip" title="Delete">
 			        			<button class="btn btn-danger btn-lg" type="submit">
 			        				<span class="glyphicon glyphicon-edit"></span>
 			        			</button>
@@ -76,11 +71,12 @@
 					    	</tbody>
 						</table>
 						</form>
-			<!-- formulario update -->	
+		<!-- formulario edit -->
 		            </div>
 		        </div>
 			</div>
 		</div>
-	
+
+
 </body>
 </html>
