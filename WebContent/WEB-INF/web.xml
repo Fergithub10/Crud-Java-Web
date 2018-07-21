@@ -4,8 +4,5 @@
   <welcome-file-list>
     <welcome-file>Login.jsp</welcome-file>
   </welcome-file-list>
-  <servlet-mapping>
-    <servlet-name>InsertService</servlet-name>
-    <url-pattern>/InsertService</url-pattern>
-  </servlet-mapping> 
+ 
 </web-app>
